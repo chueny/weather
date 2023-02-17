@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Weather from './components/Weather';
+import FetchData from './components/FetchData';
 
 function App() {
   return (
     <div className="App">
-      <h1>HELLO, weather</h1>
-      <Weather />
+      <FetchData />
+
     </div>
   );
 }

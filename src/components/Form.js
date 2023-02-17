@@ -1,11 +1,11 @@
-import React from "react"
+import React from "react";
 
 function Form({getWeather}){
     /*consult source if this doesnt work */
      return (
-        <form> 
+        <form onSubmit={getWeather}> 
             <input type="text" id="city" name="city" placeholder="City"/>
-            <button onClick={getWeather}>Fetch</button>
+            <button>Fetch</button>
         </form>
     );
 }
