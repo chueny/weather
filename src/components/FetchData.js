@@ -14,11 +14,11 @@ const [data, setData] = useState({});
     const getWeather = async (e) => {   
         e.preventDefault();
         const city = e.target.elements.city.value;
-        console.log(city);
+        // console.log(city);
         //Lat and lon requires use of Google Map Longitude and Latitude
         // const lat = 44.9778;
         // const lon = 93.2650;
-      
+        const API = 'df30b708b88ffefd6d16641249bc3a30';
 
         const fetch_data = await fetch(
             //api below requires lon and lattitude. may need google map to do it. 
@@ -29,11 +29,23 @@ const [data, setData] = useState({});
         
        const data = await fetch_data.json();
        console.log(data);
-       
-
-    
-
-
+    //    console.log(data.weather[0].icon);
+    //    console.log("description", data.weather[0].main);
+    //    console.log(data.message);
+       if (!data.message) {
+        setData({
+            temperature: data.main.temp,
+            city: data.name,
+            country: data.sys.country,
+            humidity: data.main.humidity,
+            description: data.weather[0].description,
+            error: undefined
+           });
+       } else {
+        setData({
+            error: "City not found"
+        });
+       }
     }
 
     return (
