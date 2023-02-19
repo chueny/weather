@@ -23,7 +23,7 @@ const [data, setData] = useState({});
         const fetch_data = await fetch(
             //api below requires lon and lattitude. may need google map to do it. 
            // `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API}`
-           `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API}&units=metric`
+           `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API}&units=imperial`
         );
         
         
@@ -48,10 +48,11 @@ const [data, setData] = useState({});
        }
     }
 
+
     return (
         <div>
            <div className="wrapper">
-        <div className="main">
+            <div className="main">
             <div className="title-container">
               <Headings />
             </div>

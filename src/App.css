@@ -36,3 +36,55 @@
     transform: rotate(360deg);
   }
 }
+
+.main{
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+
+}
+
+div.title-container{
+width: 60%;
+/* background-image: url("https://images.unsplash.com/photo-1534794048419-48e110dca88e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHdlYXRoZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"); */
+/* background-image: url("https://images.unsplash.com/photo-1630260643564-7f9c9c140682?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHdlYXRoZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"); */
+background-image: url("https://images.unsplash.com/photo-1573490647695-2892d0bf89e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTEyfHx3ZWF0aGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60");
+background-repeat: no-repeat;
+background-size: cover;
+color: white;
+} 
+
+.title-container__title {
+  font-size: 45px;
+  margin-top: 50px;
+}
+
+.title-container__subtitle{
+  font-size: 30px;
+  margin-top: -10px;
+}
+
+.form_data-container{
+width: 30%;
+margin-top: 60px;
+padding-left: 40px;
+text-align: left;
+color: white;
+} 
+
+input{
+  border-radius: 5px;
+}
+
+button{
+  margin-left: 5px;
+  background-color: rgb(115, 203, 207);
+  color: black;
+  border-radius: 5px;
+}
+
+button:hover{
+  background-color: blue;
+  border: 2px solid blue;
+}
