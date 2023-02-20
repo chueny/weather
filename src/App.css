@@ -53,6 +53,7 @@ background-image: url("https://images.unsplash.com/photo-1573490647695-2892d0bf8
 background-repeat: no-repeat;
 background-size: cover;
 color: white;
+
 } 
 
 .title-container__title {
@@ -87,4 +88,38 @@ button{
 button:hover{
   background-color: blue;
   border: 2px solid blue;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .main{
+    display: flex;
+    flex-flow: row wrap;
+    height: 100vh;
+  }
+
+  div.title-container{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 30vh;
+    float: left;
+  
+  }
+
+  .form_data-container{
+    position: fixed;
+    top: 150px;
+    width: 100vw;
+    margin-left:0;
+    padding-left: 0;
+    height: auto;
+    text-align: center;
+
+    /* margin-top: -250px; */
+    /* position: fixed; */
+  }
+
+ 
+
 }

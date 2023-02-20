@@ -2,6 +2,7 @@ import {useState, useEffect } from 'react';
 import Headings from './Headings';
 import Form from './Form';
 import Weather from './Weather';
+require('dotenv').config();
 
 
 export default function FetchData() {
@@ -18,12 +19,12 @@ const [data, setData] = useState({});
         //Lat and lon requires use of Google Map Longitude and Latitude
         // const lat = 44.9778;
         // const lon = 93.2650;
-        const API = 'df30b708b88ffefd6d16641249bc3a30';
+    
 
         const fetch_data = await fetch(
             //api below requires lon and lattitude. may need google map to do it. 
            // `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API}`
-           `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API}&units=imperial`
+           `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${REACT_APP_API_KEY}&units=imperial`
         );
         
         
